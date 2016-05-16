@@ -1,0 +1,59 @@
+<html>
+
+<script type="text/javascript">
+
+function sendMessage(){
+
+ Android.receiveMessage(document.getElementById('message').value);
+ Android.executeSMS();
+}
+
+function sendNumber(text){
+
+document.getElementById('number').value  = document.getElementById('number').value   + Android.receiveData(text);
+
+}
+
+function execute(text){
+
+ sendNumber(text);
+}
+
+</script>
+
+<body align = center>
+<input type ="button" style="width:100px; height:70px" value ="1" onClick="execute('1')"/>
+<input type ="button" style="width:100px; height:70px" value ="2" onClick="execute('2')"/>
+<input type ="button" style="width:100px; height:70px" value ="3" onClick="execute('3')"/>
+
+<br/>
+<input type ="button" style="width:100px; height:70px" value ="4" onClick="execute('4')"/>
+<input type ="button" style="width:100px; height:70px" value ="5" onClick="execute('5')"/>
+<input type ="button" style="width:100px; height:70px" value ="6" onClick="execute('6')"/>
+
+<br/>
+<input type ="button" style="width:100px; height:70px" value ="7" onClick="execute('7')"/>
+<input type ="button" style="width:100px; height:70px" value ="8" onClick="execute('8')"/>
+<input type ="button" style="width:100px; height:70px" value ="9" onClick="execute('9')"/>
+
+<br/>
+<input type ="button" style="width:100px; height:70px" value ="*" onClick="execute('*')"/>
+<input type ="button" style="width:100px; height:70px" value ="0" onClick="execute('0')"/>
+<input type ="button" style="width:100px; height:70px" value ="#" onClick="execute('#')"/>
+
+<br/>
+
+<input style="width:313px ;height:20px ; text-align:right;  "onfocus='blur()' type="text" id="number" >
+
+</br>
+<textarea rows="10" cols="40" id="message">
+</textarea>
+
+<br/>
+
+<input type="button" value="submit" onClick="sendMessage()">
+
+</body>
+
+
+</html>
